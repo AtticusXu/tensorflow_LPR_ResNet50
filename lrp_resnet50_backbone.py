@@ -36,12 +36,11 @@ class LRPResNet50_NoTop(tf.keras.layers.Layer):
         super().__init__(**kwargs)
 
         # Use the provided pre-trained model
-        self.base_model = pretrained_model
-
-        # Build LRP structure
+        self.base_model = pretrained_model  # Build LRP structure
         self.lrp_layers = {}
         self.lrp_bottlenecks = {}
         self.layer_activations = {}
+        self.layer_relevance = {}  # Store intermediate relevance values
         self._build_lrp_backbone()
 
     def _build_lrp_backbone(self):
@@ -225,6 +224,8 @@ class LRPResNet50_NoTop(tf.keras.layers.Layer):
             raise ValueError("No activations stored. Call forward pass first.")
 
         relevance = relevance_input
+        self.layer_relevance = {}  # Reset relevance storage
+        self.layer_relevance["output"] = relevance_input
 
         if debug:
             print(
@@ -256,6 +257,7 @@ class LRPResNet50_NoTop(tf.keras.layers.Layer):
                 relevance = self.lrp_bottlenecks[block_name].compute_relevance(
                     relevance, rule=rule, gamma=gamma, debug=debug
                 )
+                self.layer_relevance[f"after_{block_name}"] = relevance
                 if debug:
                     print(f"After {block_name}: {tf.reduce_sum(relevance).numpy():.6f}")
 
@@ -268,14 +270,19 @@ class LRPResNet50_NoTop(tf.keras.layers.Layer):
             "conv1_conv",
             "conv1_pad",
         ]
+
         for layer_name in initial_layers:
             if layer_name in self.lrp_layers:
                 layer_rule = "z_b" if layer_name == "conv1_conv" else rule
                 relevance = self.lrp_layers[layer_name].compute_relevance(
                     relevance, rule=layer_rule, gamma=gamma, debug=debug
                 )
+                self.layer_relevance[f"after_{layer_name}"] = relevance
                 if debug:
                     print(f"After {layer_name}: {tf.reduce_sum(relevance).numpy():.6f}")
+
+        # Store final input relevance
+        self.layer_relevance["input"] = relevance
 
         return relevance
 
@@ -288,6 +295,14 @@ class LRPResNet50_NoTop(tf.keras.layers.Layer):
     def get_feature_maps(self, layer_name: str) -> Optional[tf.Tensor]:
         """Get feature maps from a specific layer"""
         return self.layer_activations.get(layer_name)
+
+    def get_layer_relevance(self, layer_name: str) -> Optional[tf.Tensor]:
+        """Get relevance values from a specific layer"""
+        return self.layer_relevance.get(layer_name)
+
+    def get_all_layer_relevances(self) -> Dict[str, tf.Tensor]:
+        """Get all stored layer relevance values"""
+        return self.layer_relevance.copy()
 
 
 # Example usage and testing
