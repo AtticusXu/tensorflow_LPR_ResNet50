@@ -243,3 +243,13 @@ Contributions are welcome! Please ensure that:
 The implementation produces high-quality attribution maps that highlight the most relevant pixels for the model's prediction. The z_b rule for the first layer ensures that the attribution properly handles the preprocessed input space, while ratio-based splitting maintains relevance conservation through skip connections.
 
 For questions or issues, please refer to the original paper or create an issue in the repository.
+
+Hi Koosha,
+
+I hope you're doing well! My name is Zhongshu Xu, and I’m currently a summer intern with the MRGR-CCB team. I’m also a Ph.D. candidate in Applied Mathematics at The Ohio State University, expecting to graduate in May 2026.
+
+I'm reaching out to express my interest in the Applied AI/ML Senior Associate role (210587673) within the Risk Management & Compliance Technology – Machine Learning team.
+
+I have a solid background in applied machine learning and have worked on practical projects in finance, healthcare, and compliance. My experience includes building ML models from start to finish, improving model explainability, and handling real-world challenges. I'm comfortable working with Python, popular ML tools, and large datasets, and I’m used to sharing results clearly with both technical and non-technical teams.
+
+I've attached my CV for your reference and would really appreciate the chance to connect and learn more about the role. Thank you for your time!
