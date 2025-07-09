@@ -250,6 +250,27 @@ I hope you're doing well! My name is Zhongshu Xu, and I’m currently a summer i
 
 I'm reaching out to express my interest in the Applied AI/ML Senior Associate role (210587673) within the Risk Management & Compliance Technology – Machine Learning team.
 
-I have a solid background in applied machine learning and have worked on practical projects in finance, healthcare, and compliance. My experience includes building ML models from start to finish, improving model explainability, and handling real-world challenges. I'm comfortable working with Python, popular ML tools, and large datasets, and I’m used to sharing results clearly with both technical and non-technical teams.
+I have a solid background in applied machine learning with experience working on practical projects in finance, healthcare, and biology. My experience includes building ML models from scratch to completion, improving model explainability, and handling real-world challenges. I'm comfortable working with large datasets, popular ML tools & platforms, and I'm also comfortable writing clean, testable code and collaborating across teams to bring models into production.
 
-I've attached my CV for your reference and would really appreciate the chance to connect and learn more about the role. Thank you for your time!
+I've attached my CV for your reference and would appreciate the chance to connect and learn more about the role. Thank you for your time!
+
+Hi Alexander,
+
+I hope you're doing well! My name is Zhongshu Xu, and I’m currently a summer intern with the MRGR-CCB team. I’m also a Ph.D. candidate in Applied Mathematics at The Ohio State University, expecting to graduate in May 2026.
+
+I'm reaching out to express my strong interest in the Machine Learning Engineer – Senior Associate role (Job ID: 210619497) within the Applied AI & ML Payments group.
+
+I have hands-on experience building and deploying machine learning models across finance, healthcare, and biology. My work has involved CV, NLP, and time series prediction. I'm also comfortable writing clean, testable code and collaborating across teams to bring models into production. I enjoy solving real-world problems and am excited by the opportunity to contribute to impactful solutions in the payments space.
+
+I've attached my CV for your reference and would appreciate the opportunity to connect and learn more about the role. Thank you for your time!
+
+Hi Yifan,
+
+I hope you're doing well! My name is Zhongshu Xu, and I’m currently a summer intern with the MRGR -CCB. I’m also a Ph.D. candidate in Applied Mathematics at The Ohio State University, expecting to graduate in May 2026.
+
+I'm reaching out to express my interest in the Applied AI/ML Senior Associate role within the MLCOE team.
+My research has focused on time-series modeling, stochastic systems, and reinforcement learning, including a recent project where I developed a Transformer-based surrogate for airfoil dynamics embedded within a Deep Q-Learning framework to optimize control decisions in a dynamical system. In addition, I’ve gained hands-on experience building and deploying machine learning models across finance, healthcare, and biology, with a focus on practical, real-world impact.
+
+I've attached my CV and would be glad to connect to discuss the role further. Thank you for your time and consideration!
+
+
